@@ -34,6 +34,75 @@ textarea {
   line-height: 1.3em;
 }
 
+body {
+  margin: 0;
+  background: var(--bg-gradient);
+  background-repeat: no-repeat;
+  background-size: auto;
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  overflow-y: hidden;
+}
+
+.flex {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.row {
+  flex-direction: row;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.justify {
+  justify-content: stretch;
+  align-items: center;
+}
+
+.center {
+  justify-content: center;
+  align-items: center;
+}
+
+.end {
+  align-items: flex-end;
+}
+
+section {
+  min-height: calc(100vh - 100px);
+}
+
+.main-section {
+  margin-top: 3em;
+  width: 700px;
+}
+
+img {
+  margin-top: 3em;
+  width: 279px;
+}
+
+hr {
+  border: none;
+  border-top: var(--border);
+}
+
+hr.divider {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+input,
+textarea {
+  background: hsla(0, 0%, 100%, 0.555);
+}
+
 .textarea {
   position: relative;
 
@@ -56,83 +125,25 @@ textarea {
   }
 }
 
-body {
-  margin: 0;
-  background: var(--bg-gradient);
-  background-repeat: no-repeat;
-  background-size: auto;
-  min-height: 100vh;
-
-  display: flex;
-  justify-content: center;
-  overflow-y: hidden;
-}
-
-section {
-  min-height: calc(100vh - 100px);
-}
-
-.main-section {
-  margin-top: 3em;
-  width: 700px;
-}
-
-img {
-  margin-top: 3em;
-  width: 279px;
-}
-
-.flex {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-}
-
-.flex.input {
-  margin-top: 2em;
-}
-
-.column {
-  flex-direction: column;
-}
-
-.justify {
-  justify-content: stretch;
-  align-items: center;
-}
-
-.center {
-  justify-content: center;
-  align-items: center;
-}
-
-hr {
-  border: none;
-  border-top: var(--border);
-}
-
-hr.divider {
-  margin-top: 2em;
-  margin-bottom: 2em;
-}
-
-input,
-textarea {
-  background: hsla(0, 0%, 100%, 0.555);
-}
-
-input {
-  flex: 3;
-  padding: 5px 10px;
-
-  border: var(--border);
-}
-
 textarea {
   width: 100%;
   padding: 20px 20px;
   resize: none;
   border: var(--border);
+}
+
+.form-control {
+  display: flex;
+  flex-direction: column;
+  flex: 2;
+}
+
+input {
+  padding: 5px 10px;
+  height: 2.5em;
+
+  border: var(--border);
+  margin-right: 1em;
 }
 
 input::placeholder {
@@ -142,7 +153,6 @@ input::placeholder {
 }
 
 button {
-  margin-left: 1em;
   flex: 1;
 
   background-color: hsl(28, 80%, 58%);
@@ -153,7 +163,7 @@ button {
   cursor: pointer;
 
   transition: all 0.2s;
-  height: 3em;
+  height: 2.5em;
 
   &:hover {
     background-color: hsl(33, 80%, 58%);

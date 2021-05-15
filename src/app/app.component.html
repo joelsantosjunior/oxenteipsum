@@ -4,8 +4,14 @@
     <img src="./assets/img/logo.svg" alt="Oxente Ipsum Logo">
   </div>
 
-  <div class="flex input">
-    <input min="1" [(ngModel)]="sentences" type="number" placeholder="quantidade de sentenças">
+  <br>
+  <br>
+
+  <div class="flex row end">
+    <div class="form-control">
+      <label for="sentences">Parágrafos</label>
+      <input id="sentences" min="1" [(ngModel)]="sentences" type="number" placeholder="quantidade de sentenças">
+    </div>
     <button (click)="generateText()">gerador</button>
   </div>
 

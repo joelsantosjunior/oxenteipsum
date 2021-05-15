@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import * as data from '../../frases.json';
 
 @Component({
   selector: 'app-root',
@@ -6,25 +7,33 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  onHover = false;
-  title = 'oxenteipsum';
   public sentences: number;
-  text =
-    'Magna cupidatat ipsum laborum non pariatur commodo qui enim do enim excepteur enim labore. Et incididunt ad ipsum consequat incididunt. Minim anim dolor id nostrud fugiat duis sit. Magna sint proident Lorem deserunt dolor ipsum eu eu eu excepteur ullamco.';
-  content = '';
+  public content = '';
+  public data: Array<string> = data.frases;
 
   constructor() {
     this.sentences = 1;
     this.generateText();
   }
+
   public generateText(): void {
     this.content = '';
-    for (let i = 0; i < this.sentences - 1; i++) {
-      this.content += this.text + '\r\n\r\n';
-    }
+    for (let i = 0; i < this.sentences; i++) {
+      for (let j = 0; j < this.getRandomInt(5, 8); j++) {
+        this.content += `${this.data[this.getRandomInt(0, this.data.length)]} `;
+      }
 
-    this.content += this.text;
+      if (i < this.sentences - 1) {
+        this.content += '\r\n\r\n';
+      }
+    }
   }
 
   public copy(): void {}
+
+  private getRandomInt(min: number, max: number): number {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min)) + min;
+  }
 }
