@@ -1,0 +1,30 @@
+<section class="main-section">
+
+  <div class="flex">
+    <img src="./assets/img/logo.svg" alt="Oxente Ipsum Logo">
+  </div>
+
+  <div class="flex input">
+    <input min="1" [(ngModel)]="sentences" type="number" placeholder="quantidade de sentenças">
+    <button (click)="generateText()">gerador</button>
+  </div>
+
+  <hr class="divider">
+
+  <div class="flex column">
+    <div class="textarea">
+      <textarea readonly [(ngModel)]="content" name="text" id="" cols="30" rows="10">
+      </textarea>
+      <button (click)="copy()">copiar</button>
+    </div>
+    <p id="disclaimer">Todas as frases geradas foram retiradas de um arquivo modificado pela comunidade de
+      desenvolvedores, caso encontre algum conteúdo agressivo, preconceituoso ou que de alguma forma seja mal
+      intencionado, por favor entrar em contato, ou abrir um PR no repositório removendo o texto.</p>
+  </div>
+
+</section>
+
+<footer>
+  <hr>
+  <p> desenvolvido por Joel S. Junior </p>
+</footer>
