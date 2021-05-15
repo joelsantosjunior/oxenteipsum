@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/a94953f8-2cef-4772-834b-e3c5f52638fc/deploy-status)](https://app.netlify.com/sites/oxenteipsum/deploys)
+
 # Oxenteipsum
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.8.
