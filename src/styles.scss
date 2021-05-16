@@ -73,10 +73,6 @@ body {
   align-items: flex-end;
 }
 
-section {
-  min-height: calc(100vh - 100px);
-}
-
 .main-section {
   margin-top: 3em;
   width: 700px;
@@ -180,7 +176,7 @@ button {
 
 footer {
   height: 100px;
-  margin-top: auto;
+  margin-top: 3em;
   position: relative;
   p {
     margin: 0;
