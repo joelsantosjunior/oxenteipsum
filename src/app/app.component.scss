@@ -13,3 +13,18 @@
 button.submit {
   position: relative;
 }
+
+.form-control, .textarea {
+  position: relative;
+}
+
+label {
+  position: absolute;
+  top: -1.5em;
+  color: white;
+  font-style: italic;
+  padding: 5px 10px 1em 10px;
+  z-index: -2;
+  background-color: var(--orange);
+  transform: translateX(-1em);
+}

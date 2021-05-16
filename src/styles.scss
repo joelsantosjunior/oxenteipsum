@@ -92,7 +92,7 @@ hr.divider {
 
 input,
 textarea {
-  background: hsla(0, 0%, 100%, 0.555);
+  background: hsla(0, 0%, 100%, 1);
 }
 
 .textarea {
@@ -148,8 +148,7 @@ button {
   flex: 1;
 
   background-color: hsl(28, 80%, 58%);
-  color: white;
-  font-weight: bold;
+  color: black;
   border: none;
   box-shadow: 0px 0px 4px 1px hsla(0, 0%, 0%, 0.2);
   cursor: pointer;

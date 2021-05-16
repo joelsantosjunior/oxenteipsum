@@ -21,7 +21,8 @@
 
   <div class="flex column">
     <div class="textarea">
-      <textarea readonly [(ngModel)]="content" name="text" id="" cols="30" rows="10">
+      <label for="text">Conteúdo</label>
+      <textarea readonly [(ngModel)]="content" name="text" id="text" cols="30" rows="10">
       </textarea>
       <button (click)="copy(content)"> 
         <span>copiar</span>
