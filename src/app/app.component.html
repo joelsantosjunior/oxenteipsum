@@ -21,7 +21,10 @@
     <div class="textarea">
       <textarea readonly [(ngModel)]="content" name="text" id="" cols="30" rows="10">
       </textarea>
-      <button (click)="copy()">copiar</button>
+      <button (click)="copy(content)"> 
+        <span>copiar</span>
+      </button>
+      <p [@fade]="fadeInTooltip">Copiado para a Área de Transferência ✔</p>
     </div>
     <p id="disclaimer">Todas as frases geradas foram retiradas de um arquivo modificado pela comunidade de
       desenvolvedores, caso encontre algum conteúdo agressivo, preconceituoso ou que de alguma forma seja mal
