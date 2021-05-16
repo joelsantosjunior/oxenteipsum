@@ -5,9 +5,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { CangaceiroComponent } from './cangaceiro/cangaceiro.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, CangaceiroComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
