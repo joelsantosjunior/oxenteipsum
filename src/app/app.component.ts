@@ -1,5 +1,7 @@
 import { animate, state, style, transition, trigger } from '@angular/animations';
 import { Component } from '@angular/core';
+
+// Frases coletadas do site: https://www.belasmensagens.com.br/frases-nordestinas
 import * as data from '../../frases.json';
 
 @Component({
