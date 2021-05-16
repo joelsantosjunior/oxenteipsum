@@ -1,4 +1,11 @@
-/* You can add global styles to this file, and also import other style files */
+/* ------------- Some CSS variables ------------- */
+:root {
+  --font-size: 14px;
+  --bg-gradient: linear-gradient(#80c56e, #ffffff);
+  --border: 0.1em dashed hsl(33, 80%, 48%);
+  --orange: hsl(33, 80%, 48%);
+}
+
 html {
   box-sizing: border-box;
 }
@@ -7,31 +14,11 @@ html {
 ::before,
 ::after {
   box-sizing: inherit;
-}
-
-:root {
-  --font-size: 14px;
-  --bg-gradient: linear-gradient(#80c56e, #ffffff);
-  --border: 0.1em dashed hsl(33, 80%, 48%);
-  --orange: hsl(33, 80%, 48%);
+  font-family: "Newsreader", serif;
 }
 
 *:not(h1) {
   font-size: var(--font-size);
-}
-
-p,
-span,
-input,
-button,
-textarea {
-  font-family: "Newsreader", serif;
-}
-
-p,
-textarea {
-  position: relative;
-  line-height: 1.3em;
 }
 
 body {
@@ -44,6 +31,15 @@ body {
   display: flex;
   justify-content: center;
 }
+
+p,
+textarea {
+  position: relative;
+  line-height: 1.3em;
+}
+
+
+/* ------------- Basic Flexbox Grid System ------------- */
 
 .flex {
   width: 100%;
@@ -72,6 +68,8 @@ body {
 .end {
   align-items: flex-end;
 }
+
+/* --------------------------------------------------- */
 
 .container {
   padding: 1em;
@@ -195,7 +193,7 @@ footer::before {
   left: -10px;
 }
 
-/* Desktops and laptops ----------- */
+/* --------------- Desktops and laptops ----------- */
 @media only screen and (min-width: 1224px) {
   .container {
     width: 700px;
