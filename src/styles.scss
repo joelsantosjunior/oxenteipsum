@@ -73,9 +73,8 @@ body {
   align-items: flex-end;
 }
 
-.main-section {
-  margin-top: 3em;
-  width: 700px;
+.container {
+  padding: 1em;
 }
 
 img {
@@ -120,17 +119,17 @@ textarea {
   }
 }
 
+.form-control {
+  display: flex;
+  flex-direction: column;
+  flex: 2;
+}
+
 textarea {
   width: 100%;
   padding: 20px 20px;
   resize: none;
   border: var(--border);
-}
-
-.form-control {
-  display: flex;
-  flex-direction: column;
-  flex: 2;
 }
 
 input {
@@ -194,4 +193,11 @@ footer::before {
   position: absolute;
   top: -29px;
   left: -10px;
+}
+
+/* Desktops and laptops ----------- */
+@media only screen and (min-width: 1224px) {
+  .container {
+    width: 700px;
+  }
 }
