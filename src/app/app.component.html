@@ -10,7 +10,7 @@
   <div class="flex row end">
     <div class="form-control">
       <label for="sentences">Parágrafos</label>
-      <input id="sentences" min="1" [(ngModel)]="sentences" type="number" placeholder="quantidade de sentenças">
+      <input id="sentences" min="1" [(ngModel)]="qtdParagraph" type="number" placeholder="quantidade de sentenças">
     </div>
     <button class="submit" (click)="generateText()">Cuida!
       <cangaceiro id="cangaceiro"></cangaceiro>
@@ -22,9 +22,9 @@
   <div class="flex column">
     <div class="textarea">
       <label for="text">Conteúdo</label>
-      <textarea readonly [(ngModel)]="content" name="text" id="text" cols="30" rows="10">
+      <textarea readonly [(ngModel)]="generatedText" name="text" id="text" cols="30" rows="10">
       </textarea>
-      <button (click)="copy(content)"> 
+      <button (click)="copy(generatedText)"> 
         <span>copiar</span>
       </button>
       <p [@fade]="fadeInTooltip">Copiado para a Área de Transferência ✔</p>

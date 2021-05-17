@@ -18,25 +18,33 @@ import * as data from '../../frases.json';
   ]
 })
 export class AppComponent {
-  public sentences: number;
-  public content = '';
+  public qtdParagraph: number;
+  public generatedText = '';
   public data: Array<string> = data.frases;
   public fadeInTooltip = false;
 
   constructor() {
-    this.sentences = 1;
+    this.qtdParagraph = 1;
     this.generateText();
   }
 
   public generateText(): void {
-    this.content = '';
-    for (let i = 0; i < this.sentences; i++) {
-      for (let j = 0; j < this.getRandomInt(5, 8); j++) {
-        this.content += `${this.data[this.getRandomInt(0, this.data.length)]} `;
-      }
+    
+    this.generatedText = '';
+    
+    for (let i = 0; i < this.qtdParagraph; i++) {
 
-      if (i < this.sentences - 1) {
-        this.content += '\r\n\r\n';
+      let sentenceSize = this.getRandomInt(5, 8);
+      let content = new Set<string>();
+
+      do {
+        content.add(this.data[this.getRandomInt(0, this.data.length)]);
+      } while (content.size < sentenceSize);
+      
+      this.generatedText += [...content].reduce((acc, cur) => `${acc} ${cur}`);
+      
+      if (i < this.qtdParagraph - 1) {
+        this.generatedText += '\r\n\r\n';
       }
     }
   }
