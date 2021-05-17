@@ -35,13 +35,13 @@ export class AppComponent {
     for (let i = 0; i < this.qtdParagraph; i++) {
 
       let sentenceSize = this.getRandomInt(5, 8);
-      let content = new Set<string>();
+      let sentences = new Set<string>();
 
       do {
-        content.add(this.data[this.getRandomInt(0, this.data.length)]);
-      } while (content.size < sentenceSize);
+        sentences.add(this.data[this.getRandomInt(0, this.data.length)]);
+      } while (sentences.size < sentenceSize);
       
-      this.generatedText += [...content].reduce((acc, cur) => `${acc} ${cur}`);
+      this.generatedText += [...sentences].reduce((acc, cur) => `${acc} ${cur}`);
       
       if (i < this.qtdParagraph - 1) {
         this.generatedText += '\r\n\r\n';
