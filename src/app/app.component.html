@@ -24,7 +24,7 @@
       <label for="text">Conteúdo</label>
       <textarea readonly [(ngModel)]="generatedText" name="text" id="text" cols="30" rows="10">
       </textarea>
-      <button (click)="copy(generatedText)"> 
+      <button (click)="copy(generatedText)">
         <span>copiar</span>
       </button>
       <p [@fade]="fadeInTooltip">Copiado para a Área de Transferência ✔</p>
@@ -36,6 +36,12 @@
 
   <footer>
     <hr>
-    <p> desenvolvido por Joel S. Junior </p>
+    <div class="flex row between">
+      <span> <i>Desenvolvido por Joel S. Junior</i> </span>
+      <div>
+        <span> <a target="_blank" href="https://www.linkedin.com/in/joelsantosjunior/">Linkedin</a> </span> &nbsp;
+        <span> <a target="_blank" href="https://github.com/joelsantosjunior">Github</a> </span>
+      </div>
+    </div>
   </footer>
 </section>
