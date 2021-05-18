@@ -28,6 +28,18 @@ export class AppComponent {
     this.generateText();
   }
 
+  public async pressEnter(event: KeyboardEvent): Promise<void> {
+    console.log(event);
+    if (event.key === "Enter") {
+      this.generateText();
+    }
+
+    if (event.key === "Enter" && event.ctrlKey) {
+      this.generateText();
+      await this.copy(this.generatedText);
+    }
+  }
+
   public generateText(): void {
     
     this.generatedText = '';
