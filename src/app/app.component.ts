@@ -29,7 +29,6 @@ export class AppComponent {
   }
 
   public async pressEnter(event: KeyboardEvent): Promise<void> {
-    console.log(event);
     if (event.key === "Enter") {
       this.generateText();
     }
