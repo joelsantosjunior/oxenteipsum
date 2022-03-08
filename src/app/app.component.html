@@ -19,7 +19,7 @@
       <input id="sentences" (keyup)="pressEnter($event)" min="1" max="1000" [(ngModel)]="qtdParagraph" type="number"
         placeholder="quantidade de sentenças">
     </div>
-    <button class="submit" (click)="generateText()">Cuida!
+    <button [disabled]="qtdParagraph > 1000" class="submit" (click)="generateText()">Cuida!
       <cangaceiro id="cangaceiro"></cangaceiro>
     </button>
   </div>

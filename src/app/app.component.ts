@@ -29,6 +29,10 @@ export class AppComponent {
   }
 
   public async pressEnter(event: KeyboardEvent): Promise<void> {
+    if (this.qtdParagraph > 1000) {
+      return;
+    }
+    
     if (event.key === "Enter") {
       this.generateText();
     }

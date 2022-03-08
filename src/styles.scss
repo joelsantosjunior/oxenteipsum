@@ -166,6 +166,12 @@ button {
   &:active {
     background-color: hsl(33, 80%, 48%);
   }
+  
+  &:disabled {
+    cursor: not-allowed;
+    pointer-events: none;
+    background-color: hsl(33, 55%, 68%);
+  }
 }
 
 #disclaimer {
