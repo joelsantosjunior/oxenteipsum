@@ -169,7 +169,6 @@ button {
   
   &:disabled {
     cursor: not-allowed;
-    pointer-events: none;
     background-color: hsl(33, 55%, 68%);
   }
 }
